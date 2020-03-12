@@ -117,9 +117,5 @@ min-size = max-size = size
  */
 
 visible($status, $important = null)
-	if $status
-		opacity 1 $important
-		visibility visible $important
-	else
-		opacity 0 $important
-		visibility hidden $important
+	opacity $status ? 1 : 0 $important
+	visibility $status ? visible : hidden $important
