@@ -1,6 +1,6 @@
 {
   "name": "mantis-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small toolkit for Stylus",
   "main": "index.js",
   "repository": {
