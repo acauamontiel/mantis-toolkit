@@ -76,11 +76,10 @@ position($position, $important = null)
 		position $position $important
 
 // Position aliases
-_position($args...)
-	$fn-name = fn-name()
+_position($position, $args)
 	$i = 0
 
-	position unquote($fn-name)
+	position unquote($position)
 
 	for $j in (1..4)
 		if length($args) > $i
@@ -88,7 +87,17 @@ _position($args...)
 
 		$i += 1
 
-absolute = fixed = relative = _position
+absolute()
+	_position('absolute', arguments)
+
+fixed()
+	_position('fixed', arguments)
+
+relative()
+	_position('relative', arguments)
+
+sticky()
+	_position('sticky', arguments)
 
 
 /*
